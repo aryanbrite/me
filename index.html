@@ -33,6 +33,33 @@
             flex-direction: column;
             gap: 20px;
         }
+        section .proj {
+            display: flex;
+            gap: 20px;
+          
+        }
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        section .proj div {
+            border: 1px solid white;
+            border-radius: 12px;
+            padding: 20px;
+            padding-left: 50px;
+            padding-right: 40px;
+            flex: 1;
+            
+        }
+        section .p1 {
+            border: 1px solid white;
+            border-radius: 12px;
+            padding: 20px;
+            padding-left: 50px;
+            padding-right: 40px;
+        }
+
     </style>
 </head>
 <body>
@@ -48,25 +75,28 @@
                 <p>I am a second generation Delhiite. My parents moved to Delhi when they were young and I was born here only. From that moment I have been living in the same Delhi envionment, Was it fun ? hell yes !! I am a guy who loves exploring new things. I think this is my core hobby. Coding, Cooking, Singing, Comedy, Living alone or hanging out with a lot of people. I love this. Am I special ? Ofcource not ! I am just a regular teenager. I think every teen is like this.</p>
                 <a href="https://github.com/aryanbrite/">
                 <p>github</p>
+                </a>
             </div>
-        </a>
+        
         </div>
     </section>
     <section>
         <h2>Projects</h2>
-        <div>
-            <a href="https://github.com/deyweaver/deyweaver"><H3>Deyweaver</H3></a>
-            <p>Deyweaver is a AI productivity full stack application under Deyweaver Foundation initaiative to provide free AI accessibility to all. Let AI handle your day plannings </p>
-            <p>OSS Project : General Audiance</p>
-            <p>370 ★</p>
+        <div class="proj">
+            <div>
+                <a href="https://github.com/deyweaver/deyweaver"><H3>Deyweaver</H3></a>
+                <p>Deyweaver is a AI productivity full stack application under Deyweaver Foundation initaiative to provide free AI accessibility to all. Let AI handle your day plannings </p>
+                <p>OSS Project : General Audiance</p>
+                <p>370 ★</p>
+            </div>
+            <div>
+                <a href="https://github.com/aryanbrite/openrabbit"><h3>OpenRabbit</h3></a>
+                <p>free, open-source, self-hosted GitHub PR reviewer that replaces coderabbit.</p>
+                <p>OSS Project : Developer Tools</p>
+                <p>3 ★</p>
         </div>
-        <div>
-            <a href="https://github.com/aryanbrite/openrabbit"><h3>OpenRabbit</h3></a>
-            <p>free, open-source, self-hosted GitHub PR reviewer that replaces coderabbit.</p>
-            <p>OSS Project : Developer Tools</p>
-            <p>3 ★</p>
         </div>
-        <div>
+        <div class="p1">
             <a href="https://www.amazon.com/Zero-Job-job-without-waiting-college-ebook/dp/B0D57HYFZ5"><h3>Zero to Job</h3></a>
             <p>Zero to Job is the ultimate beginner-friendly guide for any teenager who wants to break into the world of coding, open source, and tech jobs. Whether you're 15 or 19, this book gives you a clear, no-nonsense roadmap</p>
             <p>Book</p>
