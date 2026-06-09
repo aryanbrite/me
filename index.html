@@ -69,16 +69,34 @@
             box-shadow: 10px 10px 70px white;
             transform: translateY(-10px)
             scale(1.05);
+            cursor: default;
 
+        }
+        .jj:active{
+            transition: 0.08s;
+            scale: 0.95em;
+            transform: translateY(10pX);
             
-            
-
         }
         .jj {
             transition: 0.3s;
             background-color: black;
         }
+        a{
+            -webkit-text-fill-color: black;
+            border: 1px solid aqua;
+            background-color: aqua;
+            border-radius: 20px;
+            transition: 0.3s;
+            padding-left: 17px;
+        }
 
+        a:hover{
+            transform: scale(1.05) translatey(-7px);
+        }
+        a:active{
+            transform: scale(0.95) translateY(3px);
+        }
     </style>
 </head>
 <body>
