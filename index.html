@@ -6,13 +6,30 @@
     <title>Portfolio</title>
     <link rel="icon" type="image/png" href="https://cdn.hackclub.com/019ebadc-fc40-739e-9e9f-366c6b1a25ad/favicon-32x32.png">
     <style>
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h3 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
         body {
-            margin-left: 11%;
-            margin-right: 11%;
+            
             background-color: #fefae031;
             background-image: url("https://cdn.hackclub.com/019eba81-597a-7910-8f11-101af9f625a7/Untitled%20design%20(23).png");
             color: black;
         }
+
+        .main {
+            margin-left: 11%;
+            margin-right: 11%;
+        }
+
         img {
             width: 500px;
         }
@@ -24,7 +41,7 @@
             margin-bottom: 50px;
         }
         .intro p {
-            font-size: larger;
+            font-size: large;
             line-height: 1.3;
         }
 
@@ -153,64 +170,89 @@
             gap: 20px;
         }
         
+        nav {
+            display: flex;
+            gap: 20px;
+            justify-content: right;
+            margin-right: 7%;
+          
+        }
+        nav a {
+            text-decoration: 0;
+            color: black;
+            margin-top: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover {
+            border-bottom-color: black;
+        }
         
     </style>
 </head>
 <body>
-    <div class="intro">
-        <h1>Aryan Brite</h1>
-        <p>Hi, I am aryan. A boy from Delhi, India with millions of dreams. I took a gap year after high school. I am making this site to document everything about the journey of my gap year :) all the cool things i did, How i failed and how i stood up. Everything !</p>
-    </div>
-    <section>
-        <h2>About me</h2>
-        <div class="get">
-            <img src="https://cdn.hackclub.com/019ea157-1c1f-7e41-a76f-7d15a3e1d18b/5640dd81-fa96-4976-ad12-6d0f80057b15.jpg" alt="My Picture">
-            <div>
-                <div class="gapbtwtxtandbut">
-                    <div class="text">
-                        <p style="line-height: 1.7;">I am a second generation Delhiite. My parents moved to Delhi when they were young and I was born here only. From that moment I have been living in the same Delhi envionment,</p>
-                        <p style="line-height: 1.7;">Was it fun ? hell yes !! I am a guy who loves exploring new things. I think this is my core hobby. Coding, Cooking, Singing, Comedy, Living alone or hanging out with a lot of people. I love this. Am I special ? Ofcource not ! I am just a regular teenager. I think every teen is like this.</p>
-                    </div>
-                    <div class="think" >
-                        <a href="https://github.com/aryanbrite/" class="gith">
-                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="16" alt="github"><span></span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/aryanbrite/" class="gith">
-                            <img src="https://img.magnific.com/premium-vector/square-linkedin-logo-isolated-white-background_469489-892.jpg?semt=ais_hybrid&w=740&q=80" width="16" alt="github"><span></span>
-                        </a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="">Blog</a>
+    </nav>
+    <div class="main">
+        <div class="intro">
+            <h1>Aryan Brite</h1>
+            <p>Hi, I am aryan. A boy from Delhi, India with millions of dreams. I took a gap year after high school. I am making this site to document everything about the journey of my gap year :) all the cool things i did, How i failed and how i stood up. Everything !</p>
+        </div>
+        <section>
+            <h2>About me</h2>
+            <div class="get">
+                <img src="https://cdn.hackclub.com/019ea157-1c1f-7e41-a76f-7d15a3e1d18b/5640dd81-fa96-4976-ad12-6d0f80057b15.jpg" alt="My Picture">
+                <div>
+                    <div class="gapbtwtxtandbut">
+                        <div class="text">
+                            <p style="line-height: 1.7;">I am a second generation Delhiite. My parents moved to Delhi when they were young and I was born here only. From that moment I have been living in the same Delhi envionment,</p>
+                            <p style="line-height: 1.7;">Was it fun ? hell yes !! I am a guy who loves exploring new things. I think this is my core hobby. Coding, Cooking, Singing, Comedy, Living alone or hanging out with a lot of people. I love this. Am I special ? Ofcource not ! I am just a regular teenager. I think every teen is like this.</p>
+                        </div>
+                        <div class="think" >
+                            <a href="https://github.com/aryanbrite/" class="gith">
+                                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="16" alt="github"><span></span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/aryanbrite/" class="gith">
+                                <img src="https://img.magnific.com/premium-vector/square-linkedin-logo-isolated-white-background_469489-892.jpg?semt=ais_hybrid&w=740&q=80" width="16" alt="github"><span></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
         
-        </div>
-    </section>
-    <section class="n">
-        <h2>Projects</h2>
-        <div class="proj">
-            <div class="jj">
-                <H3>Deyweaver</H3>
-                <p>Deyweaver is a AI productivity full stack application under Deyweaver Foundation initaiative to provide free AI accessibility to all. Let AI handle your day plannings </p>
-                <p>OSS Project : General Audiance</p>
-                <p>340 ★</p>
-
-                <a href="https://github.com/deyweaver/deyweaver">Repo</a>
             </div>
-            <div class="jj">
-                <h3>OpenRabbit</h3>
-                <p>free, open-source, self-hosted GitHub PR reviewer that replaces coderabbit.</p>
-                <p>OSS Project : Developer Tools</p>
-                <p>34 ★</p>
-                <a href="https://github.com/aryanbrite/openrabbit">Repo</a>
-        </div>
-        </div>
-        <div class="p1 jj">
-            <h3>Zero To Job</h3>
-            <p>Zero to Job is the ultimate beginner-friendly guide for any teenager who wants to break into the world of coding, open source, and tech jobs. Whether you're 15 or 19, this book gives you a clear, no-nonsense roadmap</p>
-            <p>Book</p>
-            <p>40+ Sold</p>
-            <a href="https://www.amazon.com/Zero-Job-job-without-waiting-college-ebook/dp/B0D57HYFZ5">Amazon</a>
-        </div>
-    </section>
+        </section>
+        <section class="n">
+            <h2>Projects</h2>
+            <div class="proj">
+                <div class="jj">
+                    <H3>Deyweaver</H3>
+                    <p>Deyweaver is a AI productivity full stack application under Deyweaver Foundation initaiative to provide free AI accessibility to all. Let AI handle your day plannings </p>
+                    <p>OSS Project : General Audiance</p>
+                    <p>340 ★</p>
+                    <a href="https://github.com/deyweaver/deyweaver">Repo</a>
+                </div>
+                <div class="jj">
+                    <h3>OpenRabbit</h3>
+                    <p>free, open-source, self-hosted GitHub PR reviewer that replaces coderabbit.</p>
+                    <p>OSS Project : Developer Tools</p>
+                    <p>34 ★</p>
+                    <a href="https://github.com/aryanbrite/openrabbit">Repo</a>
+            </div>
+            </div>
+            <div class="p1 jj">
+                <h3>Zero To Job</h3>
+                <p>Zero to Job is the ultimate beginner-friendly guide for any teenager who wants to break into the world of coding, open source, and tech jobs. Whether you're 15 or 19, this book gives you a clear, no-nonsense roadmap</p>
+                <p>Book</p>
+                <p>40+ Sold</p>
+                <a href="https://www.amazon.com/Zero-Job-job-without-waiting-college-ebook/dp/B0D57HYFZ5">Amazon</a>
+            </div>
+        </section>
+    </div>
 
 </body>
 </html>

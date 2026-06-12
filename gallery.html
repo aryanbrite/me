@@ -13,10 +13,14 @@
         body {
             background-color: #fefae031;
             background-image:url("https://cdn.hackclub.com/019eba81-597a-7910-8f11-101af9f625a7/Untitled%20design%20(23).png");
+
+            margin-bottom: 150px;
+        }
+
+        .main {
             margin-left: 11% ;
             margin-right: 11%;
-            margin-top: 80px;
-            margin-bottom: 150px;
+            margin-top: 47px;
         }
 
         p {
@@ -41,18 +45,56 @@
             gap: 30px;
             
         }
+        nav {
+            display: flex;
+            gap: 20px;
+            justify-content: right;
+            margin-right: 7%;
+          
+        }
+        nav a {
+            text-decoration: 0;
+            color: black;
+            margin-top: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: 0.2s;
+            border-bottom: 2px solid transparent;
+        }
 
+        nav a:hover {
+            border-bottom-color: black;
+        }
+
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h3 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
     </style>
 </head>
 <body>
-    <h1>Gallery</h1>
-    <p style="margin-top: 25px;">A lot has changes in the few years.</p>
-    <p> Different people, different dreams, different versions of me. This is just a small collection of the moments I dont want to forget.</p>
-    <section class="imges">
-        <img src="https://cdn.hackclub.com/019ebac0-8b78-7df4-80ef-2b430d1b64ed/WhatsApp%20Image%202026-06-12%20at%2012.50.43%20PM.jpg" alt="">
-        <img src="https://cdn.hackclub.com/019ebac4-6a77-750d-a2b5-dbdb7b332372/WhatsApp%20Image%202026-06-12%20at%2012.50.44%20PM.jpeg" alt="">
-        <img src="https://cdn.hackclub.com/019ebac7-6e04-717b-8ff7-68182d2f509e/WhatsApp%20Image%202026-06-12%20at%2012.50.44%20PM%20(1).jpeg" alt="">
-        <img src="https://cdn.hackclub.com/019ebacd-6f8f-78ad-b2cc-1d0cccf81f36/WhatsApp%20Image%202026-06-12%20at%2012.50.42%20PM.jpeg" alt="">
-    </section>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="">Blog</a>
+    </nav>
+    <div class="main">
+        <h1>Gallery</h1>
+        <p style="margin-top: 25px;">A lot has changes in the few years.</p>
+        <p> Different people, different dreams, different versions of me. This is just a small collection of the moments I dont want to forget.</p>
+        <section class="imges">
+            <img src="https://cdn.hackclub.com/019ebac0-8b78-7df4-80ef-2b430d1b64ed/WhatsApp%20Image%202026-06-12%20at%2012.50.43%20PM.jpg" alt="">
+            <img src="https://cdn.hackclub.com/019ebac4-6a77-750d-a2b5-dbdb7b332372/WhatsApp%20Image%202026-06-12%20at%2012.50.44%20PM.jpeg" alt="">
+            <img src="https://cdn.hackclub.com/019ebac7-6e04-717b-8ff7-68182d2f509e/WhatsApp%20Image%202026-06-12%20at%2012.50.44%20PM%20(1).jpeg" alt="">
+            <img src="https://cdn.hackclub.com/019ebacd-6f8f-78ad-b2cc-1d0cccf81f36/WhatsApp%20Image%202026-06-12%20at%2012.50.42%20PM.jpeg" alt="">
+        </section>
+    </div>
 </body>
 </html>
