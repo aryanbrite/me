@@ -77,7 +77,7 @@
             margin:auto;
             border: 1px solid black;
             padding: 15px;
-            padding-left: 200px;
+            padding-left: 20%;
             border-radius: 12px;
             padding-bottom: 30px;
             background-image: url("https://i.pinimg.com/736x/9a/19/5c/9a195c2f5a61bb0fb6708eb7200dd88f.jpg");
@@ -101,6 +101,11 @@
         .subs {
             display: flex;
             gap: 10px;
+        }
+        @media (max-width:577px){
+            .subs {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
