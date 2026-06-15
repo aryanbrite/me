@@ -244,9 +244,10 @@
         }
 
         .gro {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            display: flex;
             gap: 18px;
+            overflow-y: auto;
+            padding-bottom: 15px;
         }
 
          .goo {
@@ -259,6 +260,11 @@
 
         #img1 {
             width: fit-content;
+        
+        }
+
+        .wr {
+            overflow-y: auto;
         }
 
         ul {
@@ -282,6 +288,9 @@
             }
         }
 
+        @media (max-width:516px){
+            ul {padding-inline-start: 0px;}
+        }
         #updated {
             color: rgb(65, 65, 65);
             text-align: right;
