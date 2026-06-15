@@ -284,6 +284,10 @@ a::selection
             margin-bottom: 30px;
         }
 
+        .highlight {
+            background-color: 	#20ffbc59;
+            text-shadow: none;
+        }
 
         @media (max-width:1179px){
             .get{
