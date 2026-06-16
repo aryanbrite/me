@@ -19,7 +19,7 @@
 </p>
 
 > [!IMPORTANT]
-> **AI Usage:** No AI coding assistants like Copilot, Cursor or Claude Code were used to write or edit the code for this project. ChatGPT was used only for occasional conceptual guidance and CSS references. All HTML and CSS was hand coded. A bit of chatgpt I used to make the badges of this readme. The content is my me. Git commits messages were autocommited by the buildin VS code feature.
+> **AI Usage:** No AI coding assistants like Copilot, Cursor or Claude Code were used to write or edit the code for this project. ChatGPT was used only for occasional conceptual guidance and CSS references but not directly copy pasted. A bit of chatgpt I used to make the badges of this readme. The content is my me. Git commits messages were autocommited by the buildin VS code feature.
 >
 > GitHub Copilot was accidentally opened twice while trying to use Emmet abbreviations in VS Code. The suggestions were immediately closed, no code was accepted, and no AI-generated code was used in this project.
 
