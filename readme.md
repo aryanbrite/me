@@ -64,7 +64,7 @@ I made this using only custom css. No tailwind/frameworks and components
 1) Clone the repository:
 
 ```sh
- git clone https://github.com/aryanbrite/my-portfolio-new-.git 
+ git clone https://github.com/aryanbrite/me.git 
 ```
 
 2) Open index.html in your browser.
