@@ -1,0 +1,46 @@
+name: Auto Grammar Fix
+
+on:
+  push:
+    paths:
+      - 'Daily.html'
+      - 'daily.html'
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  fix-grammar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required to push changes back
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install google-generativeai
+
+      - name: Run grammar fix script
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python .github/scripts/fix_grammar.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add Daily.html daily.html
+          
+          # Only commit if there are actual changes
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: fix grammar in Daily.html"
+            git push origin HEAD:${{ github.head_ref || github.ref_name }}
+          fi
