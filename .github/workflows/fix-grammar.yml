@@ -5,13 +5,13 @@ on:
     paths:
       - 'Daily.html'
       - 'daily.html'
-  workflow_dispatch: # Allows manual triggering
+  workflow_dispatch:
 
 jobs:
   fix-grammar:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Required to push changes back
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -20,32 +20,22 @@ jobs:
           ref: ${{ github.head_ref || github.ref }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-
-      - name: Install dependencies
-        run: pip install requests
-
       - name: Run grammar fix script
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python .github/scripts/fix_grammar.py
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: node .github/scripts/fix_grammar.js
 
       - name: Commit and push changes
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           
-          # FIX: Only add the file that actually exists to prevent the fatal pathspec error
           if [ -f "Daily.html" ]; then
             git add Daily.html
           elif [ -f "daily.html" ]; then
             git add daily.html
           fi
           
-          # Only commit if there are actual changes
           if ! git diff --staged --quiet; then
             git commit -m "chore: fix grammar in Daily.html"
             git push origin HEAD:${{ github.head_ref || github.ref_name }}
