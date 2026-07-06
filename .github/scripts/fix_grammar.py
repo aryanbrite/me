@@ -1,6 +1,6 @@
-import google.generativeai as genai
 import os
 import re
+import requests
 
 def process_daily_html():
     file_path = "Daily.html"
@@ -17,15 +17,14 @@ def process_daily_html():
     if not api_key:
         print("GEMINI_API_KEY not set!")
         return
-        
-    # Configure the Gemini API
-    genai.configure(api_key=api_key)
-    
-    # Initialize the Gemma 4 31B model
-    # Note: The official Google API uses "gemma-4-31b-it" instead of "google/gemma-4-31B-it"
-    model = genai.GenerativeModel("gemma-4-31b-it")
 
-    # Regex to find each day block
+    # FIX: We use the official Gemini REST API directly to avoid the deprecated Python SDK.
+    # Note: The official API model names do not include the "google/" prefix.
+    # If "gemma-4-31b-it" returns a 404 error in the logs, change this to "gemma-3-27b-it" or "gemini-1.5-flash"
+    model_name = "gemma-4-31b-it" 
+    
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}"
+
     day_pattern = re.compile(r'(<!-- day start -->)(.*?)(<!-- day end -->)', re.DOTALL)
 
     def fix_grammar(match):
@@ -53,9 +52,19 @@ def process_daily_html():
             "Return ONLY the corrected text with HTML tags, without any markdown formatting, code blocks, or extra explanations."
         )
         
+        payload = {
+            "contents": [{
+                "parts": [{"text": prompt + "\n\nText to fix:\n" + conday_content}]
+            }]
+        }
+        
         try:
-            response = model.generate_content(prompt + "\n\nText to fix:\n" + conday_content)
-            corrected_content = response.text.strip()
+            response = requests.post(url, json=payload)
+            response.raise_for_status()
+            result = response.json()
+            
+            # Extract the text from the official API response structure
+            corrected_content = result['candidates'][0]['content']['parts'][0]['text'].strip()
             
             # Clean up markdown code blocks if the AI accidentally adds them
             if corrected_content.startswith("```html"):
@@ -72,11 +81,13 @@ def process_daily_html():
             new_body = body[:start_idx] + corrected_content + body[end_idx:]
             
             # Add the comment right after <!-- day start -->
-            new_prefix = prefix + " <!-- grammer fixed -->\n"
+            new_prefix = prefix + " <!-- grammar fixed -->\n"
             
             return new_prefix + new_body + suffix
         except Exception as e:
             print(f"Error calling LLM: {e}")
+            if 'response' in locals():
+                print(f"Response text: {response.text}")
             return match.group(0) # Return original if AI fails
 
     # Process all day blocks

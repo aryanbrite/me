@@ -26,7 +26,7 @@ jobs:
           python-version: '3.10'
 
       - name: Install dependencies
-        run: pip install google-generativeai
+        run: pip install requests
 
       - name: Run grammar fix script
         env:
@@ -37,7 +37,13 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add Daily.html daily.html
+          
+          # FIX: Only add the file that actually exists to prevent the fatal pathspec error
+          if [ -f "Daily.html" ]; then
+            git add Daily.html
+          elif [ -f "daily.html" ]; then
+            git add daily.html
+          fi
           
           # Only commit if there are actual changes
           if ! git diff --staged --quiet; then
