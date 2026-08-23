@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://cdn.hackclub.com/019f1815-82c6-776b-b1a2-f326934edd79/Untitled%20design%20(51)%20(1).png">
+    <title>Aryan's Blog - Readme</title>
+    <style>
+        section {
+            margin-top: 50px;
+        
+        }
+        body {
+            background-color:black;
+            color: white;
+
+
+            margin-bottom: 150px;
+        }
+
+        .main {
+            margin-left: 11% ;
+            margin-right: 11%;
+            margin-top: 47px;
+        }
+
+        q,p
+         {
+            font-size:large;
+        }
+        q::selection,
+        p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+a::selection
+
+ {
+            background-color: white;
+            color: black;
+        }
+
+        nav {
+            display: flex;
+            
+
+            gap: 20px;
+            justify-content: right;
+            margin-right: 7%;
+          
+        }
+        nav a {
+            text-decoration: 0;
+            color: white;
+            margin-top: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover {
+            border-bottom-color: white;
+        }
+
+        q, p {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h3,h4 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .content {
+            margin-left: 7%;
+            margin-right: 7%;
+        }
+        .headi{
+            display: grid;
+            grid-template-columns: 5fr 1fr;
+            justify-content: center;
+            
+        }
+        q,p {
+            line-height: 1.7;
+        }
+        .highlight {
+            background-color: 	white;
+            text-shadow: none;
+            color: black;
+        }
+
+        q {
+            border-left: 3px solid rgb(121, 121, 121);
+            padding-left: 6px;
+            font-style: italic;
+        }
+
+        @media (max-width:517px){
+            .main {
+            margin-left: 6% ;
+            margin-right: 6%;
+            }
+            body {
+        background-image: none;
+        background-size: auto;
+    }
+        }
+        #updated {
+            color: rgb(138, 137, 137);
+            text-align: right;
+            font-style: italic;
+            margin-top: 100px;
+        }
+
+
+         /* Blog CSS */
+        
+        
+
+        .mind {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            
+        }
+        #imga {
+            width:450px
+        }
+
+        .imggrp {
+            display: flex;
+            overflow-y: auto;
+            gap: 10px;
+            padding-bottom: 10px;
+        }
+        .imggrp img {
+            height: 200px;
+
+        }
+        .link {
+            color: rgb(255, 66, 8);
+        }
+
+        @media(max-width:1293px){
+            .mind {display: block;}
+            #grp {
+            display: flex;
+    flex-direction: column;
+    align-items: center;
+            }
+            #grp img {
+                    width: 100%;
+    max-width: 450px;
+    display: block;
+    margin: 10px auto;
+            }
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../gallery.html">Gallery</a>
+        <a href="../blog.html">Blog</a>
+        <!-- <a href="../Daily.html
+">Daily</a> -->
+    </nav>
+    <div class="main">
+        <div class="headi">
+            <h1 style="margin-bottom: 60px;">
+                Why Are You Still Giving Your Code to CodeRabbit? Meet OpenRabbit.
+            </h1>
+            <p>Aug 26 2026</p>
+        </div>
+        <div class="content">
+                <!-- blog -->
+                 <p>Think about it. <br>When you use an AI pull-request reviewer as a SaaS, how are you giving it access to your code?</p>
+
+<p>You install an app. You connect your GitHub account. You select your repositories. You approve permissions. And now a company’s platform can look at the source code inside your private projects.</p>
+
+<p>Maybe that is fine for you. But if you are working on critical software, private infrastructure, security tools, or important open-source projects, that is a very serious trust decision.</p>
+
+<q>huh ?</q>
+
+<p>You are not just using a chatbot. You are giving an external service access to your codebase.<br>And this is the part nobody talks about enough. A lot of AI pull-request review tools in the market are paid SaaS platforms. You pay for the service, and you trust their infrastructure, their permissions, their security, and every tool running behind the scenes.</p>
+
+<p>We saw why that matters when Kudelski Security reported a serious vulnerability in CodeRabbit that created a potential path to remote code execution and read-and-write access to roughly one million repositories, including private repositories. CodeRabbit said the issue was responsibly disclosed, fixed within hours, and that its investigation found no evidence of customer-data access.</p>
+
+<p>Good. But the question is still there.</p>
+
+<q>Why does your source code need to cross that trust boundary in the first place?</q>
+
+<p>So then you think, fine. I will not use a SaaS. I will run an open-source AI pull-request reviewer myself.</p>
+
+<p>Great idea.</p>
+
+<p>But now think about what that actually means.</p>
+
+<ul>
+    <li><p>You need hosting.</p></li>
+    <li><p>Then a backend.</p></li>
+    <li><p>Then authentication.</p></li>
+    <li><p>Then a database.</p></li>
+    <li><p>Then workers.</p></li>
+    <li><p>Then queues.</p></li>
+    <li><p>Then logs.</p></li>
+    <li><p>Then monitoring.</p></li>
+    <li><p>Then security hardening.</p></li>
+</ul>
+
+<p>Then you have to deploy it, update it, scale it, debug it, and keep the whole thing alive.</p>
+
+<p>Maybe you put it on an EC2 instance. Maybe you put it in Docker. Maybe you build a complete platform around it just to get one AI reviewer working on your pull requests.</p>
+
+<p>You wanted to review code with AI, and now you are responsible for another service on the internet.</p>
+
+<p>Another server. Another attack surface. Another bill. Another thing that can break at two in the morning.</p>
+
+<p>Honestly, at this point, the setup sounds more painful than the problem you were trying to solve.</p>
+
+<q>And then I found OpenRabbit.</q>
+
+<p>OpenRabbit brings AI-powered pull-request review into the developer’s existing GitHub workflow. It is open source, self-hosted, requires no separate application server, supports pluggable LLM providers, and produces both high-level summaries and line-specific feedback.</p>
+
+<p>Now this is where I genuinely started thinking:</p>
+
+<q>wait—how is this so technically advanced, but so ridiculously easy to set up?</q>
+
+<p>Because under the hood, OpenRabbit is doing a lot.</p>
+
+<p>This is a TypeScript GitHub Action. It connects GitHub pull requests to GitHub Actions. It reads the changes. It can gather more context when the diff is not enough. It can look at linked issues. It sends the review to a configurable LLM provider such as OpenRouter or Groq. Then it processes the response and posts a structured review directly back into the pull request.</p>
+
+<p>That is not just a prompt and a response.</p>
+
+<p>That is an entire AI pull-request review pipeline.</p>
+
+<p>And it is packaged as a GitHub Action.</p>
+
+<ul>
+    <li><p>No EC2 instance for you to manage.</p></li>
+    <li><p>No separate backend to deploy.</p></li>
+    <li><p>No database to maintain.</p></li>
+    <li><p>No worker system to keep alive.</p></li>
+    <li><p>No new SaaS dashboard to learn.</p></li>
+</ul>
+
+<p><span class="highlight">The complexity is absolutely there. It is just hidden behind the GitHub Actions workflow, where it belongs.</span></p>
+
+<p>That is the insane part.</p>
+
+<p>The system is advanced. The setup is almost shockingly simple.</p>
+
+<p>OpenRabbit is written in TypeScript, and the project has the pieces you would expect from a serious developer tool: the action configuration, the review logic, the LLM provider layer, structured review output, and tests.</p>
+
+<p>But you do not need to build those pieces yourself. You do not need to create a new product around them. You do not need to become an infrastructure engineer just to turn on AI code review.</p>
+
+<p>You just need a GitHub repository and a workflow file.</p>
+
+<h3>How to set it up</h3>
+
+<p>Create this file:</p>
+
+<p><span class="highlight">.github/workflows/reviewer.yml</span></p>
+
+<p>Then add the OpenRabbit action. Give it the GitHub token. Add your LLM key through GitHub Actions Secrets. Choose your provider. Choose your model. Select both if you want the summary and the inline comments.</p>
+
+<p>And then push it.</p>
+
+<p>That is it.</p>
+
+<p>Seriously.</p>
+
+<p>You did not build a SaaS. You did not deploy an EC2 instance. You did not create a backend. You did not set up a database. You did not configure a queue. You did not spend your weekend fighting deployment problems.</p>
+
+<p>You added a GitHub workflow, and GitHub Actions runs the reviewer for you.</p>
+
+<h3>So what happens when a pull request arrives?</h3>
+
+<p>Now let’s look at what happens when a pull request actually arrives.</p>
+
+<p>I open a pull request. GitHub detects it. The workflow starts. OpenRabbit reads the changed files and starts building the review context.</p>
+
+<p>And this is important, because a pull-request diff is not the whole project.</p>
+
+<p>If an AI only sees the changed lines, it is reviewing your code with blinders on. Those lines are connected to the rest of the codebase. They are connected to existing functions, existing security logic, linked issues, and the actual goal of the pull request.</p>
+
+<p>OpenRabbit is designed to go beyond that basic diff. If it needs more information, it can fetch additional files. It can read linked GitHub issues. It tries to understand what the pull request is supposed to do—not just what the changed lines look like.</p>
+
+<p>Then it sends that context through the configured LLM provider and turns the response into a real review.</p>
+
+<p>Not just, <span class="highlight">‘Looks good.’</span></p>
+
+<p>A structured review.</p>
+
+<p>A summary of what changed. A view of the main goal. Scope feedback. Risk feedback. Action items. And inline comments attached directly to the code that needs attention.</p>
+
+<p>It can look for security problems like SQL injection, cross-site scripting, and broken authentication.</p>
+
+<p>It can look for performance problems like slow logic, unnecessary work, missing caching, and memory leaks.</p>
+
+<p>It can think about race conditions and ask whether the code will still work when the project becomes much larger.</p>
+
+<p>It can notice when a pull request starts drifting into unrelated cleanup or random refactoring.</p>
+
+<p>And it has this idea called the <span class="highlight">Socratic Scaffold</span>, which basically means it can explain why something is risky instead of immediately throwing a random fix at the developer.</p>
+
+<p>That is what makes this so interesting to me.</p>
+
+<p>This is not AI code review as a fancy comment generator.</p>
+
+<p><span class="highlight">This is AI code review as an actual workflow.</span></p>
+
+<p>A pull request comes in. The system gathers context. The model analyzes it. The response is processed. The useful feedback is organized. And the result appears where developers already work.</p>
+
+<p>Inside GitHub.</p>
+
+<p>And all of that is happening through a tool that you install with one workflow file.</p>
+
+<p>That is the part that feels completely unreal.</p>
+
+<p>The engineering underneath is serious. TypeScript. GitHub Actions. LLM integrations. Context gathering. Structured responses. Security checks. Performance checks. Scope detection. Inline review comments.</p>
+
+<p>But the person using it does not have to fight any of that.</p>
+
+<p>You just understand how GitHub works, create the workflow, add the secret, and open a pull request.</p>
+
+<p>The setup is simple enough for anyone who knows the basics of a GitHub repository.</p>
+
+<p><span class="highlight">That is good tooling.</span></p>
+
+<p>The complicated stuff happens underneath. The user experience stays simple.</p>
+
+<h3>Why this matters</h3>
+
+<p>And if you want to try it, OpenRabbit is available on GitHub Marketplace as the “OpenRabbit” Action. You can use the latest version, look at the example pull request, and then go directly into the open-source repository and inspect the code yourself.</p>
+
+<p>You can see what it is doing. You can see the workflow. You can see the TypeScript. You can see the provider configuration.</p>
+
+<p>You are not just trusting a mysterious black box behind a login screen.</p>
+
+<p>Now, I am not saying every SaaS tool is automatically bad. That would be a lazy argument.</p>
+
+<p>I am saying you should understand what you are giving away.</p>
+
+<p>When an external AI reviewer can access your repository, that access matters.</p>
+
+<p>When you deploy a separate open-source reviewer, the infrastructure matters.</p>
+
+<p>And when OpenRabbit gives you a way to run advanced AI review inside your existing GitHub Actions workflow, without standing up another application server, that matters too.</p>
+
+<p>Because this is the future I want to see.</p>
+
+<p>Not every developer sending their source code to one giant review platform.</p>
+
+<p>Not every open-source project running another fragile server just to get AI feedback.</p>
+
+<p><span class="highlight">I want powerful, open-source tools that run where developers already have control.</span></p>
+
+<p>OpenRabbit is currently built for GitHub Actions, but the idea is bigger than GitHub. The same model can be adapted to other Git servers and CI systems: receive the pull request, gather the context, call the model, process the response, and publish the review.</p>
+
+<p>So yes, OpenRabbit is technically intense.</p>
+
+<p>It is a TypeScript application. It is a GitHub Action. It connects to LLM providers. It gathers project context. It can inspect linked issues. It analyzes security, performance, scalability, and scope. It turns AI output into structured feedback that developers can actually use.</p>
+
+<p>But installing it is not intense.</p>
+
+<p><span class="highlight">Installing it is one workflow file.</span></p>
+
+<p>That is why I cannot stop talking about this.</p>
+
+<p>OpenRabbit takes something that sounds like a massive infrastructure problem and turns it into a few lines of YAML.</p>
+
+<q>So before you connect another AI tool to your repository, think about the access.</q>
+
+<p>Think about the trust boundary.<br>
+Think about the server you are about to deploy.<br>
+Think about the maintenance you are about to inherit.</p>
+
+<p>And then look at OpenRabbit.</p>
+
+<p>The technology is serious.</p>
+
+<p>The setup is ridiculously easy.</p>
+
+<p>Your code stays in your workflow. Your review runs in your CI. Your provider is configurable. Your infrastructure is not controlled by some random black box.</p>
+
+<p><span class="highlight">Your code. Your workflow. Your review.</span></p>
+
+<p>That is OpenRabbit.</p>
+
+                 <!-- blog-end -->
+                 <p id="updated" >Last Updated: Aug 26, 2026 <br>
+                    Did you know That I write all my blogs in 100% custom css without any framework.
+                 </p>
+        </div>
+    </div>
+</body>
+</html>
