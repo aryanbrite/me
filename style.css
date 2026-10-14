@@ -478,3 +478,22 @@ nav {
         animation: none;
     }
 }
+
+.thing {
+    height: 100vh;
+    padding-top: 7vh;
+}
+
+.imo {
+    width: 20vw;
+}
+
+
+
+.im1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+}
+
