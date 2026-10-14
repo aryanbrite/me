@@ -45,8 +45,8 @@ a::selection
         img {
             width: 50%
 
-        }
-        section {
+           }
+           section {
             margin-bottom: 40px;
         }
         .intro{
@@ -349,6 +349,24 @@ nav {
     background-color: transparent;
     width: 100%;
     z-index: 10;
+}
+
+.home-nav {
+    background-color: transparent;
+    z-index: 10000;
+    right: 0.5%;
+    margin-right: 7%;
+}
+
+.home-nav::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 48px;
+    background-color: white;
+    z-index: -1;
 }
 
 .hp-overlay {
