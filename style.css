@@ -338,3 +338,12 @@ a::selection
         background-size: auto;
     }
 }
+
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: white;
+    width: 100%;
+}
