@@ -31,12 +31,8 @@ a::selection
         }
         body {
             
-            background-color: #fefae031;
+            background-color: white;
             color: black;
-            background-image:
-        linear-gradient(#e6e6e6 1px, transparent 1px),
-        linear-gradient(90deg, #e6e6e6 1px, transparent 1px);
-        background-size: 16px 16px;
         }
 
         .main {
