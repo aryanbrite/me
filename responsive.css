@@ -1,0 +1,215 @@
+:root .gro,
+:root .goo,
+:root .imggrp,
+:root .wr {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+}
+
+:root .gro > *,
+:root .goo > *,
+:root .imggrp > * {
+    flex: 0 0 auto;
+}
+
+:root img,
+:root video,
+:root iframe {
+    max-width: 100%;
+}
+
+:root .gro img,  :root .gro video,
+:root .goo img,  :root .goo video,
+:root .imggrp img,
+:root .wr img,   :root .wr video {
+    max-width: none;
+}
+
+:root body {
+    -webkit-text-size-adjust: 100%;
+}
+
+:root .intro h1 {
+    font-size: clamp(2.5rem, 12vw, 6rem);
+    line-height: 1.04;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 1023px) {
+    :root .main {
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+
+    :root .content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    :root .thing {
+        height: auto;
+        padding-top: 76px;
+        padding-bottom: 24px;
+    }
+
+    :root .get {
+        gap: 24px;
+    }
+
+    :root .im1 {
+        flex-direction: column;
+        gap: 18px;
+        text-align: center;
+    }
+
+    :root .imo {
+        width: 52vw;
+        max-width: 230px;
+    }
+
+    :root .headi {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    :root section .proj div,
+    :root section .p1 {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    :root .main {
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+
+    :root h1 {
+        font-size: clamp(1.75rem, 8.5vw, 3rem);
+        line-height: 1.08;
+        overflow-wrap: break-word;
+    }
+
+    :root h2 {
+        font-size: 1.5rem;
+    }
+    :root .timeline img {
+        width: 190px;
+        height: 145px;
+    }
+
+    :root .vid {
+        height: 145px;
+    }
+
+    :root .imggrp img {
+        height: 150px;
+    }
+
+    :root #img1 {
+        height: 230px;
+        width: auto;
+        max-width: none;
+    }
+
+    :root ul {
+        padding-inline-start: 18px;
+    }
+
+    :root li {
+        margin-left: 0;
+        margin-bottom: 22px;
+    }
+
+    :root .email {
+        width: auto;
+        max-width: none;
+        padding: 18px;
+    }
+
+    :root .pos {
+        margin-left: 0;
+    }
+
+    :root .subs {
+        flex-direction: column;
+    }
+
+    :root #ema {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+        min-height: 44px;
+    }
+
+    :root .subs button {
+        width: 100%;
+        min-height: 44px;
+    }
+
+    :root .imges {
+        gap: 18px;
+    }
+
+    :root #updated {
+        margin-top: 48px;
+    }
+    :root .theme-toggle {
+        right: 14px;
+        bottom: 14px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 430px) {
+
+    :root nav {
+        gap: 14px;
+        margin-right: 5%;
+        padding-left: 14px;
+    }
+
+    :root .home-nav {
+        margin-right: 5%;
+    }
+
+    :root nav a {
+        font-size: 15px;
+        margin-top: 12px;
+    }
+
+    :root .timeline img {
+        width: 165px;
+        height: 130px;
+    }
+
+    :root .vid {
+        height: 130px;
+    }
+}
+
+@media (hover: none) {
+
+    :root .imges img:hover,
+    :root img:hover {
+        transform: none;
+    }
+
+    :root .gith:hover {
+        transform: none;
+    }
+
+    :root .theme-toggle:hover {
+        transform: none;
+    }
+    :root .gith:active {
+        transform: scale(.95) translateY(5px);
+    }
+}
