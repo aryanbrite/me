@@ -19,9 +19,9 @@
 </p>
 
 > [!IMPORTANT]
-> **AI Usage:** No AI coding assistants like Copilot, Cursor or Claude Code were used to write or edit the code for this project. ChatGPT was used only for occasional conceptual guidance and CSS references but not directly copy pasted. A bit of chatgpt I used to make the badges of this README. The content is my me. Git commits messages were autocommited by the buildin VS code feature.
+> **AI Usage:** ChatGPT was used only for occasional conceptual guidance and CSS references but not directly copy pasted. A bit of chatgpt I used to make the badges of this README. The content is my me. Git commits messages were autocommited by the buildin VS code feature.
 >
-> GitHub Copilot was accidentally opened twice while trying to use Emmet abbreviations in VS Code. The suggestions were immediately closed, no code was accepted, and no AI-generated code was used in this project.
+> I used chatgpt and copilot to make the image gallery wall but i fixed the ui by myself later.
 
 > [!NOTE]
 > Most of the website content was Copy-Pasted from my previous portfolio. Therefore, content-writing time recorded is least. The About section and the Daily message was written specifically for this version, so that time is recorded..
